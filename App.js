@@ -1,20 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, TouchableNativeFeedback, Text, View, Image, Button, alert, Alert, Platform, Dimensions } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import styles from './app/config/Styles.js';
+import WelcomeScreen from './app/screens/WelcomeScreen.js';
+import ViewImageScreen from './app/screens/ViewImageScreen.js';
 
 export default function App() {
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    /*
+    <LinearGradient start={{x: 1, y: 1}} end={{x: 0, y: 0}} colors={['#F6BB66', '#E67EF5']} style={[styles.container]}>
+
+      <View style={[styles.main_view]}>
+        <Text>as</Text>
+      </View>
+
+    </LinearGradient>
+    */
+
+    <ViewImageScreen />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
